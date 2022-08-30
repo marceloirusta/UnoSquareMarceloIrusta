@@ -12,7 +12,7 @@ public class ApplicationPage extends BasePage{
 
     public ApplicationPage(){
 
-        PageFactory.initElements(driver, BasePage.class);
+        PageFactory.initElements(driver, this);
     }
 
 

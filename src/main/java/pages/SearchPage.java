@@ -42,7 +42,7 @@ public class SearchPage extends BasePage{
 
     public SearchPage(){
 
-        PageFactory.initElements(driver, BasePage.class);
+        PageFactory.initElements(driver, this);
     }
 
     public void checkIfLocalePopupIsPresent() throws InterruptedException {

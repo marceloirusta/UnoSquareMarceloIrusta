@@ -17,7 +17,7 @@ public class MicrosoftMainPage extends BasePage{
 
     public MicrosoftMainPage(){
 
-        PageFactory.initElements(driver, BasePage.class);
+        PageFactory.initElements(driver, this);
     }
 
     public WindowsMainPage clickWindowsTab() throws IOException, ParseException {

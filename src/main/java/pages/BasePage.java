@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 public class BasePage {
     public static WebDriver driver;
     public MicrosoftMainPage microsoftMainPage;
-    public WindowsMainPage windowsMainPage;
+    //public WindowsMainPage windowsMainPage;
 
     @BeforeMethod
     public void setup() throws IOException, ParseException {
@@ -24,7 +24,7 @@ public class BasePage {
         driver.get("https://www.microsoft.com/");
 
         microsoftMainPage = new MicrosoftMainPage();
-        windowsMainPage = new WindowsMainPage();
+       // windowsMainPage = new WindowsMainPage();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 

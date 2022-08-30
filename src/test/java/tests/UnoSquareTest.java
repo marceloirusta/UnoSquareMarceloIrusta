@@ -11,9 +11,8 @@ import java.io.IOException;
 
 public class UnoSquareTest extends BasePage {
 
-    MicrosoftMainPage microsoftMainPage;
-    WindowsMainPage windowsMainPage;
-    SearchPage searchPage;
+    public SearchPage searchPage;
+    public WindowsMainPage windowsMainPage;
 
     @Test
     public void unoSquareTestCaseMicrosoft() throws IOException, ParseException, InterruptedException {

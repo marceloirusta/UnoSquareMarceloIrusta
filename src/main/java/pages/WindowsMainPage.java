@@ -23,7 +23,7 @@ public class WindowsMainPage extends BasePage{
     @FindBy(id = "cli_shellHeaderSearchInput")
     WebElement searchInput;
 
-    @FindBy(id = "uhfCatLogo")
+    @FindBy(xpath = "//*[@id=\"uhfCatLogo\"]/span")
     WebElement windowsHeader;
 
     JSONParser jParse = new JSONParser();
@@ -31,7 +31,7 @@ public class WindowsMainPage extends BasePage{
     String searchValue = (String) jsonObject.get("searchBoxValue");
 
     public WindowsMainPage() throws IOException, ParseException {
-        PageFactory.initElements(driver, BasePage.class);
+        PageFactory.initElements(driver, this);
     }
 
     public SearchPage search() throws InterruptedException {
@@ -46,7 +46,7 @@ public class WindowsMainPage extends BasePage{
 
     public boolean isPageLoaded() {
         try {
-            windowsHeader.isDisplayed();
+            windowsHeader.getText().equals("Windows");
             return true;
         }
         catch (org.openqa.selenium.NoSuchElementException e) {
